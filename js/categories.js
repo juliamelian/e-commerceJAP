@@ -37,7 +37,7 @@ function sortCategories(criteria, array){
 
 function setCatID(id) {
     localStorage.setItem("catID", id);
-    window.location = "products.html"
+    window.location = "products.html";
 }
 
 function showCategoriesList(){
@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function(e){
             //sortAndShowCategories(ORDER_ASC_BY_NAME, resultObj.data);
         }
     });
+    
 
     document.getElementById("sortAsc").addEventListener("click", function(){
         sortAndShowCategories(ORDER_ASC_BY_NAME);
