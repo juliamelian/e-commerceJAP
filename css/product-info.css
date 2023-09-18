@@ -1,0 +1,67 @@
+/* Estilos para la información del producto */
+
+#product-name {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+}
+h3{
+ font-size: 1.3rem;
+ font-weight: bold;
+}
+#product-price{
+ color: #0056b3;
+
+}
+#product-description,
+#product-images,
+#comentariosAnteriores{
+  margin-top: 50px;
+}
+.texto-negrita {
+  font-weight: bold;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los comentarios */
+
+h3::first-letter {
+  text-transform: uppercase;
+  
+}
+#comentariosAnteriores {
+  font-size: 18px;
+}
+
+/* Estilos del botón de enviar */
+#enviarComentario {
+  background-color: orange;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  transition: .3s;
+ }
+ 
+ #enviarComentario:hover{
+  transform: translateY(-5px);
+  transition: .3s;
+  color: white;
+ }
+/* Estrellas blancas por defecto */
+.fa-star {
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  text-shadow: 2px 2px 2px black;
+}
+
+
+/* Estrellas amarillas cuando se marcan */
+.fa-star.checked {
+               color: orange;
+}
