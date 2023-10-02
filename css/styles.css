@@ -9,13 +9,10 @@
   font-weight: bold;
 }
 
-#user-username{
+#user-username {
   font-size: 1.05rem;
-  color:orange;
-}
-
-nav a {
-  text-decoration: none;
+  color: orange;
+  margin-right: 10px;
 }
 
 .bd-placeholder-img {
@@ -190,33 +187,213 @@ a.custom-card:hover {
   color: orange;
 }
 
-#category-info h1, h4 { 
-  display: flex; /* Convertimos el título de la página en un texto flexible */
-  justify-content: center; /* Centramos el texto horizontalmente */
+#category-info h1,
+h4 {
+  display: flex;
+  /* Convertimos el título de la página en un texto flexible */
+  justify-content: center;
+  /* Centramos el texto horizontalmente */
 }
 
-.imagen-del-producto{
-  max-width: 30%; /* Establecemos un ancho máximo para laS imágenes */
-  border: 1px solid #ccc9c9; /* Les ponemos un borde */
-  margin: 10px; /* Establecemos un margen para separar las imágenes del contenedor donde se encuentran */
+.imagen-del-producto {
+  max-width: 30%;
+  /* Establecemos un ancho máximo para laS imágenes */
+  border: 1px solid #ccc9c9;
+  /* Les ponemos un borde */
+  margin: 10px;
+  /* Establecemos un margen para separar las imágenes del contenedor donde se encuentran */
 }
 
 .container-para-producto {
-  border: 1px solid rgb(252, 214, 181); /* Ponemos un borde a los contenedores de los productos */
-  display: flex; /* Convertimos el contenedor en un contenedor flexible */
+  border: 1px solid rgb(252, 214, 181);
+  /* Ponemos un borde a los contenedores de los productos */
+  display: flex;
+  /* Convertimos el contenedor en un contenedor flexible */
 }
 
 .datos-del-producto {
-  padding: 10px; /* Establecemos un padding para que el texto no quede tan pegado al borde del contenedor */  
-  width: 100%; /* Ajustamos el ancho para que ocupe todo el espacio del container donde se ubica */
+  padding: 10px;
+  /* Establecemos un padding para que el texto no quede tan pegado al borde del contenedor */
+  width: 100%;
+  /* Ajustamos el ancho para que ocupe todo el espacio del container donde se ubica */
 }
 
 .texto-destacado {
-  font-size: 150%; /* Ajustamos el tamaño de la fuente para destacar el nombre y precio del producto */
+  font-size: 150%;
+  /* Ajustamos el tamaño de la fuente para destacar el nombre y precio del producto */
 }
 
 .vendidos {
-  color: gray; /* Ajustamos el color de la fuente para que quede más clarito */
-  float: right; /* Alineamos para que aparezca a la derecha */
-  padding: 10px; /* Establecemos un padding para separar el texto del contenedor donde se encuentra */
+  color: gray;
+  /* Ajustamos el color de la fuente para que quede más clarito */
+  float: right;
+  /* Alineamos para que aparezca a la derecha */
+  padding: 10px;
+  /* Establecemos un padding para separar el texto del contenedor donde se encuentra */
 }
+
+/* boton de dark mode */
+/* todas las confituraciones del mismo */
+
+.toggle-switch {
+  position: relative;
+  width: 5px;
+  height: 8px;
+  --light: #ffffff;
+  --dark: #2c2c2c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+  left: 35px;
+  top: 10px;
+}
+
+.toggle-switch :hover {
+  background-color: none; 
+}
+
+.switch-label {
+  position: absolute;
+  width: 75px;
+  height: 5px;
+  background-color: rgb(37, 36, 36);
+  border-radius: 50px;
+  cursor: pointer;
+  border: 3px solid var(--dark);
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-radius: 2px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.checkbox:checked ~ .slider {
+  background-color: rgb(37, 36, 36);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 150%;
+  -webkit-box-shadow: inset 1px -4px 0px 0px var(--light);
+  box-shadow: inset 12px -4px 0px 0px var(--light);
+  background-color: rgb(37, 36, 36);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider::before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+  background-color: rgb(255, 217, 0);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+  .dark-mode { 
+  background-color: #373737;
+color:white;
+}
+.navbar-nav a:not(#dropdownMenuButton1).nav-link:hover{
+  border-bottom: 4px solid orange;
+  transition: .1s;
+  color: orange;
+  
+}
+
+
+/* ESTILO DE LA BARRA DE NAVEGACIÓN - ENTREGA 4 */
+
+#dropdownMenuButton1{
+background-color: transparent;
+border: 1px solid rgb(255, 140, 0);
+
+}
+#dropBoton * {
+  height: 40px;
+  transition: all .3s;
+  text-decoration: none;
+  color: #000000;
+  border-radius: 0.25rem;
+}
+
+.dropdown-menu {
+  background-color: rgb(255, 227, 203);
+  height: 180px;
+}
+
+#dropBoton li:last-child {
+  margin-bottom: -15px;
+}
+
+.hover:hover {
+  background-color: orange;
+}
+
+#dropBoton li:first-child {
+  margin-top: -5px;
+}
+
+#dropdownMenuButton1::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 17px;
+}
+
+#navbarNav .navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+
+.carousel-inner img {
+  max-width: 50%; 
+  height: auto; 
+}
+
+
+/* Estilo para el contenedor del footer */
+#footer-div {
+  margin-top: 20px;
+ 
+  position: relative; /* Asegura que los elementos hijos estén posicionados relativamente a este contenedor */
+  display: flex;
+  flex-direction: column; /* Alinea los elementos verticalmente */
+  align-items: center; /* Centra verticalmente */
+
+}
+
+/* Estilo para las categorías en el footer*/
+#category-links-container {
+  position: absolute; /* Posición absoluta con respecto al contenedor del footer */
+  top: 0; /* Coloca las categorías en la parte superior del footer */
+  display: flex;
+  flex-wrap: wrap; /* Permite que las categorías se envuelvan a la siguiente línea si no caben en una sola fila */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  gap: 15px;
+}
+
+#category-links-container a:hover {
+  text-decoration: underline;
+}
+
+#category-links-container a {
+  text-decoration: none;
+  color: #000000;
+}
+
+

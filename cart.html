@@ -9,50 +9,42 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link href="css/cart.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/242a8f5c81.js" crossorigin="anonymous" defer></script>
+  <link rel="icon" type="image/icon" href="img/Captura.JPG">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav w-100 justify-content-between">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="categories.html">Categorías</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sell.html">Vender</a>
-          </li>
-          <!-- li para el nombre de usuario-->
-          <li class="nav-item" id="username-nav-item">
-            <span class="nav-link" id="user-username"></span>
-            <a class="nav-link" id="logout-link" href="#">Cerrar sesión</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div id="navbar-container"></div>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
-    </div>
+    <h1>Carrito de compras</h1>
+ 
+    <table>
+      <tr>
+          <th></th>
+          <th>Nombre</th>
+          <th>Costo</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+          <th></th> <!-- columna para el boton eiminar -->
+      </tr>
+      <tr id="cartItem">
+          <td><img id="itemImage" src="" alt=""></td>
+          <td id="itemName"></td>
+          <td id="itemCost"></td>
+          <td><input id="itemQuantity" type="number"></td>
+          <td id="itemSubtotal"></td>
+      </tr>
+  </table>
+  
+  <div id="total-del-carrito">
+    <h4>Total del Carrito: <span id="total-amount">0</span></h4>
+  </div>
+
   </main>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-end">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a></p>
-    </div>
-  </footer>
+  <footer><div id="footer-div"></div></footer>
+  
+  
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
@@ -61,10 +53,13 @@
       <div></div>
     </div>
   </div>
+  <script src="js/footer.js"></script>
   <script src="js/auth.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/cart.js"></script>
+  <script src="js/navbar.js"></script>
+  
 </body>
 
 </html>
